@@ -1,0 +1,23 @@
+table {
+    border-collapse: collapse;
+}
+table, td, th {
+    border: 1px solid black;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+#tablevb tr:hover {background-color:black;
+                   color:white}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    padding-bottom: 0px;
+
+}
+
+.noshow{
+    display: none;
+}
