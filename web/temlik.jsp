@@ -140,6 +140,7 @@
                              }
                          </script>
                         -->
+
                         <script>
                             $(document).ready(function () {
                                 $("#arama10").keypress(function (e) {
@@ -147,11 +148,12 @@
                                         var value = $(this).val();
                                         var FaturaTutarıToplam = 0.0;
                                         $("td[id='TemlikNo']").each(function (i) {
-                                            if ($(this).text() == value && value != "") {
+                                            if ($(this).text() == value && value != "" && $(this).parent("tr").css("display") != "none") {
                                                 $(this).css("color", "red")
                                                 $(this).parent("tr").css("color", "blue");
                                                 FaturaTutarıToplam += Number($("td[id='FaturaTutarı']").eq(i).text());
                                                 $("#FaturaTutarıToplam").text(FaturaTutarıToplam);
+
                                             } else if (value == "") {
                                                 $(this).css("color", "black");
                                                 $(this).parent("tr").css("color", "black");
@@ -168,14 +170,16 @@
                             });
                         </script>
 
+
                         <script>
                             $(document).ready(function () {
+
                                 $("#arama0").keypress(function (e) {
                                     if (e.key === "Enter") {
                                         var value = $(this).val();
                                         var FaturaTutarıToplam = 0.0;
                                         $("td[id='TemlikVerenFirma']").each(function (i) {
-                                            if ($(this).text().trim().indexOf(value) == 0 && value != "") {
+                                            if ($(this).text().trim().indexOf(value) == 0 && value != "" && $(this).parent("tr").css("display") != "none") {
                                                 $(this).css("color", "red")
                                                 $(this).parent("tr").css("color", "blue");
                                                 FaturaTutarıToplam += Number($("td[id='FaturaTutarı']").eq(i).text());
@@ -193,6 +197,7 @@
                                         });
                                     }
                                 });
+
                             });
                         </script>
                         </body>
